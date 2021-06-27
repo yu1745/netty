@@ -7,7 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="byteToMessage" />
+        <module name="InAndOutBoundHandler" />
+        <module name="protobuf" />
         <module name="groupchat" />
+        <module name="websocket" />
       </profile>
     </annotationProcessing>
   </component>

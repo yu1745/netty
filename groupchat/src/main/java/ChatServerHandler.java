@@ -48,7 +48,7 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
-        System.out.println(ctx.channel().remoteAddress().toString().substring(1) + "is online");
+        System.out.println(ctx.channel().remoteAddress().toString().substring(1) + " is online");
     }
 
     @Override
