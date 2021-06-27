@@ -1,7 +1,0 @@
-**/target/
-**/test/
-*.class
-*.jar
-*.iml
-.idea
-.gitignore
