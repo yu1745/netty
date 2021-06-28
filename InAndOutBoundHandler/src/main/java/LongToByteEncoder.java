@@ -6,7 +6,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 
 import java.util.Random;
 
-public class MyLongToByteHandler extends MessageToByteEncoder<Long> {
+public class LongToByteEncoder extends MessageToByteEncoder<Long> {
 //    @Override
 //    public void channelActive(ChannelHandlerContext ctx) throws Exception {
 //       /* byte a,b,c,d;
@@ -21,7 +21,12 @@ public class MyLongToByteHandler extends MessageToByteEncoder<Long> {
 //
 //    }
 
+
+//这个方法无意义,如果返回true就编码,返回false不是拦截,而是不处理直接放行
 //    @Override
+//    public boolean acceptOutboundMessage(Object msg) throws Exception {
+//        return msg instanceof Long;
+//    }
 //    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 //        var buf = (ByteBuf) msg;
 //        System.out.println("server response: " + buf.toString(StandardCharsets.UTF_8));

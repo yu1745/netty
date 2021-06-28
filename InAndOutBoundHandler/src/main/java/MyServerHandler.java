@@ -13,4 +13,10 @@ public class MyServerHandler extends SimpleChannelInboundHandler<Long> {
         ctx.close();
 //        super.exceptionCaught(ctx, cause);
     }
+
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+//        super.handlerRemoved(ctx);
+        System.out.println("MyServerHandler.handlerRemoved");
+    }
 }

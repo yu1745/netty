@@ -17,8 +17,10 @@ public class Client {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ChannelPipeline pipeline = ch.pipeline();
-                            pipeline.addLast(new LongToByteEncoder());
-                            pipeline.addLast(new MyClientHandler());
+//                            pipeline.addLast(new LongToByteEncoder());
+//                            pipeline.addLast(new MyClientHandler());
+                            pipeline.addLast(new MyMessageEncoder());
+                            pipeline.addLast(new ClientHandler());
                         }
                     });
             ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 8888).sync();
