@@ -9,22 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>websocket</artifactId>
+    <artifactId>echo</artifactId>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
-
-
-<!--    <dependencies>-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.netty/netty-example &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.netty</groupId>-->
-<!--            <artifactId>netty-example</artifactId>-->
-<!--            <version>4.1.20.Final</version>-->
-<!--        </dependency>-->
-
-<!--    </dependencies>-->
 
 </project>
