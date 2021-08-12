@@ -24,15 +24,22 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
  */
 @Sharable
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+//        super.channelActive(ctx);
+        ctx.executor().submit((()->{
+            System.out.println("nmsl");
+        }));
+    }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        ctx.write(msg);
+        System.out.println("EchoServerHandler.channelRead");
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
-        ctx.flush();
+        System.out.println("EchoServerHandler.channelReadComplete");
     }
 
     @Override
